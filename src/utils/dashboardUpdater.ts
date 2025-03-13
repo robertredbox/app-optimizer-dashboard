@@ -6,6 +6,8 @@
  */
 
 import { loadAppTweakData } from './dataApiService';
+import { storeJsonData } from './githubApiClient';
+import { generateDataFilename } from './githubDataStorage';
 
 /**
  * Interface for app data request parameters
@@ -44,18 +46,31 @@ export const processAppDataRequest = async (request: AppDataRequest) => {
       throw new Error(`Error fetching AppTweak data: ${result.error}`);
     }
     
-    // Step 2: Store data in GitHub repository
-    // This would use the GitHub API to create or update a JSON file
-    // For now, we'll just log that this would happen
-    console.log('Data fetched successfully. Would store in GitHub repository.');
+    // Step 2: Generate file path for storing in GitHub
+    const filePath = `data/${platform}/${appId}_${country}_${startDate.replace(/-/g, '')}_${endDate.replace(/-/g, '')}.json`;
     
-    // Step 3: Update the dashboard with new data
-    // This already happens in loadAppTweakData function
+    // Step 3: Store data in GitHub repository
+    const commitMessage = `Update data for ${platform} app ${appId} (${country}) - ${startDate} to ${endDate}`;
+    
+    const storageResult = await storeJsonData(
+      'robertredbox',  // Owner
+      'app-optimizer-dashboard',  // Repo
+      filePath,
+      result.data,
+      commitMessage
+    );
+    
+    if (!storageResult.success) {
+      console.warn(`Warning: Failed to store data in GitHub: ${storageResult.error}`);
+    } else {
+      console.log(`Data successfully stored in GitHub: ${filePath}`);
+    }
     
     return {
       success: true,
       message: 'Dashboard updated successfully',
-      data: result.data
+      data: result.data,
+      githubResult: storageResult
     };
   } catch (error) {
     console.error('Error processing app data request:', error);
