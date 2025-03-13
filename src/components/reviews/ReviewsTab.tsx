@@ -1,12 +1,15 @@
-
 import React from "react";
 import ChartContainer from "../ui/ChartContainer";
+import InsightsPanel from "../ui/InsightsPanel";
 import { 
   ratingsData, 
   reviewSentimentData, 
   reviewTopicsData, 
   reviewVolumeData,
-  featuredReviewsData 
+  featuredReviewsData,
+  reviewsInsightsData,
+  reviewsRecommendationsData,
+  monthlyReportData
 } from "@/utils/mockData";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, LineChart, Line } from "recharts";
 import { MessageSquare, Star, ThumbsDown, ThumbsUp } from "lucide-react";
@@ -36,6 +39,12 @@ const ReviewsTab = () => {
           </div>
         </div>
       </div>
+
+      <InsightsPanel 
+        insights={reviewsInsightsData}
+        recommendations={reviewsRecommendationsData}
+        monthlyReport={monthlyReportData}
+      />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <ChartContainer 

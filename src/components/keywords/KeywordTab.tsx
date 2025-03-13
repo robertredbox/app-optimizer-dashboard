@@ -1,8 +1,15 @@
-
 import React from "react";
 import ChartContainer from "../ui/ChartContainer";
 import DataTable from "../ui/DataTable";
-import { keywordDifficultyData, keywordRankingHistoryData, topKeywordsData } from "@/utils/mockData";
+import InsightsPanel from "../ui/InsightsPanel";
+import { 
+  keywordDifficultyData, 
+  keywordRankingHistoryData, 
+  topKeywordsData,
+  keywordInsightsData,
+  keywordRecommendationsData,
+  monthlyReportData
+} from "@/utils/mockData";
 import { ArrowDown, ArrowUp, Filter, Search } from "lucide-react";
 import { 
   ScatterChart, 
@@ -40,6 +47,12 @@ const KeywordTab = () => {
           </button>
         </div>
       </div>
+
+      <InsightsPanel 
+        insights={keywordInsightsData}
+        recommendations={keywordRecommendationsData}
+        monthlyReport={monthlyReportData}
+      />
 
       <div className="grid grid-cols-1 gap-6">
         <ChartContainer 

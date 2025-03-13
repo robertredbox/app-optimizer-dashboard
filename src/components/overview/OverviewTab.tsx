@@ -1,13 +1,16 @@
-
 import React from "react";
 import MetricCard from "../ui/MetricCard";
 import ChartContainer from "../ui/ChartContainer";
 import DataTable from "../ui/DataTable";
+import InsightsPanel from "../ui/InsightsPanel";
 import { 
   appPerformanceData, 
   monthlyStatsCards,
   topKeywordsData,
-  optimizationOpportunitiesData
+  optimizationOpportunitiesData,
+  overviewInsightsData,
+  overviewRecommendationsData,
+  monthlyReportData
 } from "@/utils/mockData";
 import { 
   ArrowDown,
@@ -46,6 +49,13 @@ const OverviewTab = () => {
           </button>
         </div>
       </div>
+
+      <InsightsPanel 
+        insights={overviewInsightsData}
+        recommendations={overviewRecommendationsData}
+        monthlyReport={monthlyReportData}
+        className="mb-8"
+      />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <MetricCard 

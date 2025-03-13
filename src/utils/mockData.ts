@@ -1,4 +1,3 @@
-
 // App Performance Data
 export const appPerformanceData = [
   { month: 'Jan', downloads: 12500, revenue: 45000, conversion: 3.2 },
@@ -243,3 +242,148 @@ export const monthlyStatsCards = [
     trend: 'up',
   },
 ];
+
+// Mock data for reviews insights
+export const reviewsInsightsData = [
+  {
+    id: "review-insight-1",
+    title: "Sentiment trend improvement",
+    description: "Positive sentiment increased by 15% this month, primarily driven by users appreciating the new user interface updates.",
+    type: "trend"
+  },
+  {
+    id: "review-insight-2",
+    title: "Feature feedback analysis",
+    description: "Search functionality received the most positive mentions (78 reviews), while payment process had the most negative feedback (32 reviews).",
+    type: "insight"
+  },
+  {
+    id: "review-insight-3",
+    title: "Review volume patterns",
+    description: "Review submissions peak on weekends and after app updates, with a 40% higher submission rate compared to weekdays.",
+    type: "insight"
+  },
+];
+
+export const reviewsRecommendationsData = [
+  {
+    id: "review-rec-1",
+    title: "Improve payment process UI",
+    description: "Redesign the payment confirmation screen to address user confusion mentioned in 32 negative reviews this month.",
+    type: "recommendation",
+    impact: "high"
+  },
+  {
+    id: "review-rec-2",
+    title: "Highlight new search features",
+    description: "Create in-app tooltips to showcase the advanced search capabilities that users are positively reviewing.",
+    type: "recommendation",
+    impact: "medium"
+  },
+  {
+    id: "review-rec-3",
+    title: "Address crash reports in reviews",
+    description: "Investigate and fix the reported crashes on Android 12 devices mentioned in 18 reviews from the last two weeks.",
+    type: "recommendation",
+    impact: "high"
+  },
+];
+
+// Mock data for keyword insights
+export const keywordInsightsData = [
+  {
+    id: "keyword-insight-1",
+    title: "Emerging competitor keywords",
+    description: "Three new competitors are ranking for your core keywords: 'mobile analytics', 'app performance tracking', and 'ASO tools'.",
+    type: "insight"
+  },
+  {
+    id: "keyword-insight-2",
+    title: "Seasonal keyword opportunities",
+    description: "Back-to-school related keywords are showing increased search volume, creating temporary ranking opportunities.",
+    type: "trend"
+  },
+  {
+    id: "keyword-insight-3",
+    title: "Long-tail keyword success",
+    description: "Your app is ranking in the top 10 for 23 new long-tail keywords related to 'mobile performance optimization'.",
+    type: "insight"
+  },
+];
+
+export const keywordRecommendationsData = [
+  {
+    id: "keyword-rec-1",
+    title: "Optimize for competitor keywords",
+    description: "Update app metadata to better target 'app performance tracking' where competitors are gaining traction.",
+    type: "recommendation",
+    impact: "high"
+  },
+  {
+    id: "keyword-rec-2",
+    title: "Capitalize on seasonal trends",
+    description: "Temporarily emphasize education-related features in your app store listing to capture back-to-school search traffic.",
+    type: "recommendation",
+    impact: "medium"
+  },
+  {
+    id: "keyword-rec-3",
+    title: "Expand long-tail keyword strategy",
+    description: "Create content specifically targeting additional long-tail keywords around 'mobile app optimization techniques'.",
+    type: "recommendation",
+    impact: "medium"
+  },
+];
+
+// Mock data for overview insights
+export const overviewInsightsData = [
+  {
+    id: "overview-insight-1",
+    title: "Conversion rate correlation",
+    description: "App Store conversion rate shows a strong positive correlation with review count and average rating improvements.",
+    type: "insight"
+  },
+  {
+    id: "overview-insight-2",
+    title: "Install source breakdown",
+    description: "Search continues to be your primary acquisition channel (67%), followed by browse (18%) and referrals (15%).",
+    type: "insight"
+  },
+  {
+    id: "overview-insight-3",
+    title: "Regional performance shift",
+    description: "APAC region shows 28% growth month-over-month, outpacing other regions and becoming your second largest market.",
+    type: "trend"
+  },
+];
+
+export const overviewRecommendationsData = [
+  {
+    id: "overview-rec-1",
+    title: "Review solicitation campaign",
+    description: "Implement a targeted review request prompt for users who have completed key success actions in your app.",
+    type: "recommendation",
+    impact: "high"
+  },
+  {
+    id: "overview-rec-2",
+    title: "APAC localization expansion",
+    description: "Expand localization efforts to include Indonesian and Thai languages to support your growing APAC presence.",
+    type: "recommendation",
+    impact: "high"
+  },
+  {
+    id: "overview-rec-3",
+    title: "A/B test app icon and screenshots",
+    description: "Run A/B tests on your app icon and first three screenshots to improve conversion from browse traffic.",
+    type: "recommendation",
+    impact: "medium"
+  },
+];
+
+// Monthly report data
+export const monthlyReportData = {
+  summary: "This month shows a positive trajectory across key metrics with a 12% increase in average downloads and 8% improvement in conversion rate. User engagement is up 15% with review sentiment improving significantly. Your ASO efforts are paying off with 34 new keyword rankings in the top 20.",
+  date: "June 2023"
+};
+
