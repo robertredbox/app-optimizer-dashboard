@@ -1,6 +1,5 @@
 
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useRouting } from "@/contexts/RoutingContext";
 import { initAppTweakWrapper, initializeAppTweakWrappers } from "@/utils/appTweakWrapper";
 import OverviewTab from "@/components/overview/OverviewTab";
@@ -9,7 +8,6 @@ import ReviewsTab from "@/components/reviews/ReviewsTab";
 import CompetitorTab from "@/components/competitors/CompetitorTab";
 import MetadataTab from "@/components/metadata/MetadataTab";
 import Sidebar from "@/components/layout/Sidebar";
-import { Button } from "@/components/ui/button";
 
 // Define tab types for the dashboard
 type TabId = "overview" | "keywords" | "reviews" | "competitors" | "metadata" | "reports" | "settings";
@@ -83,9 +81,6 @@ const Index = () => {
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-medium">ASO Dashboard</h1>
             <div className="flex items-center gap-4">
-              <Button asChild variant="outline" size="sm">
-                <Link to="/test">Test Routing System</Link>
-              </Button>
               <div className="text-sm text-muted-foreground">Last updated: June 10, 2023</div>
               <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-medium">
                 JS
