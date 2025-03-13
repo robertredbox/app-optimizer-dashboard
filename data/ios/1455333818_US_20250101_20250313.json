@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "appId": "1455333818",
+    "platform": "ios",
+    "country": "US",
+    "timeframe": {
+      "startDate": "2025-01-01",
+      "endDate": "2025-03-13"
+    }
+  },
+  "appInfo": {
+    "title": "Super.One Fan Battle",
+    "subtitle": "The Ultimate Trivia Game",
+    "developer": "Super One",
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7c/6a/f4/7c6af427-7e3a-623b-0d07-94149ea183da/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/1024x1024bb.jpg",
+    "genres": [6014, 6000, 7018],
+    "currentVersion": "3.88",
+    "releaseDate": "2019-03-10",
+    "lastUpdate": "2025-02-19",
+    "rating": 4.6,
+    "ratingCount": 23
+  },
+  "reviews": {
+    "recent": {},
+    "analysis": {}
+  },
+  "keywords": {
+    "top": [
+      {"keyword": "fc mobile 25", "ranking": 96, "volume": 51},
+      {"keyword": "madfut 25", "ranking": 29, "volume": 38},
+      {"keyword": "superfan", "ranking": 19, "volume": 36},
+      {"keyword": "madfut", "ranking": 49, "volume": 36},
+      {"keyword": "taka", "ranking": 36, "volume": 28},
+      {"keyword": "mad fut 25", "ranking": 37, "volume": 27},
+      {"keyword": "mad fut", "ranking": 49, "volume": 24},
+      {"keyword": "super one", "ranking": 2, "volume": 23},
+      {"keyword": "one futbol", "ranking": 49, "volume": 23},
+      {"keyword": "club fans", "ranking": 79, "volume": 23}
+    ],
+    "trending": [
+      "rodeo houston",
+      "georgiahosa",
+      "auction .com",
+      "‏‏‏‏ ‏1001",
+      "‏‏‏1001",
+      "starzon",
+      "‫google‬",
+      "mapxplorer:radar,navigation",
+      "rodeohouston",
+      "bnp paribas open official"
+    ]
+  },
+  "competitors": {
+    "list": [
+      {
+        "id": "1633590206",
+        "title": "NBA Infinite - PvP Basketball",
+        "rating": 4.4,
+        "price": "free"
+      },
+      {
+        "id": "6446899306",
+        "title": "MADFUT 24",
+        "rating": 4.8,
+        "price": "free"
+      },
+      {
+        "id": "1522945407",
+        "title": "2 Minute Football Classic",
+        "rating": 4.3,
+        "price": "free"
+      },
+      {
+        "id": "507874482",
+        "title": "Soctics League Multiplayer",
+        "rating": 4.6,
+        "price": "$1.99"
+      },
+      {
+        "id": "6444235677",
+        "title": "Rugby League Legends '23",
+        "rating": 5.0,
+        "price": "$5.99"
+      }
+    ],
+    "insights": {
+      "genreOverlap": [
+        {"genre": 6014, "percentage": "95.0%"},
+        {"genre": 7016, "percentage": "95.0%"},
+        {"genre": 6004, "percentage": "35.0%"},
+        {"genre": 6016, "percentage": "20.0%"}
+      ],
+      "priceDistribution": {
+        "freeApps": 15,
+        "paidApps": 5,
+        "averagePrice": 0.85
+      },
+      "ratingAnalysis": {
+        "averageRating": 4.57
+      }
+    }
+  },
+  "downloads": {
+    "data": [],
+    "note": "Download data not available for the requested period"
+  },
+  "categories": {
+    "data": [],
+    "note": "Category rankings data not available for the requested period"
+  }
+}
