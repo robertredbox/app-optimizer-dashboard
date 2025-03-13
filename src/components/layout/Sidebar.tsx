@@ -1,6 +1,14 @@
 
 import { cn } from "@/lib/utils";
-import { BarChart2, Layers, LineChart, Search, Settings, Star, Users } from "lucide-react";
+import { 
+  BarChart2, 
+  Layers, 
+  LineChart, 
+  Search, 
+  Settings, 
+  Star, 
+  Users 
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface SidebarProps {
@@ -22,11 +30,11 @@ const Sidebar = ({ activeTab, onTabChange, className }: SidebarProps) => {
 
   return (
     <aside className={cn(
-      "bg-sidebar h-screen min-w-64 flex flex-col animate-fade-in",
+      "bg-sidebar h-screen w-64 flex flex-col animate-fade-in shadow-lg",
       className
     )}>
-      <div className="p-6">
-        <h1 className="text-sidebar-foreground text-2xl font-medium">ASO Dashboard</h1>
+      <div className="p-6 border-b border-sidebar-border">
+        <h1 className="text-sidebar-foreground text-2xl font-heading font-medium">ASO Dashboard</h1>
         <p className="text-sidebar-foreground/70 text-sm mt-1">June 2023</p>
       </div>
       
@@ -41,8 +49,9 @@ const Sidebar = ({ activeTab, onTabChange, className }: SidebarProps) => {
                   onTabChange(item.id);
                 }}
                 className={cn(
-                  "sidebar-link",
-                  activeTab === item.id && "active"
+                  "flex items-center gap-3 px-4 py-3 text-sidebar-foreground/80 rounded-md transition-all duration-200",
+                  "hover:bg-sidebar-accent hover:text-sidebar-foreground",
+                  activeTab === item.id && "bg-sidebar-accent text-sidebar-foreground font-medium"
                 )}
               >
                 {item.icon}
@@ -56,7 +65,7 @@ const Sidebar = ({ activeTab, onTabChange, className }: SidebarProps) => {
       <div className="p-4 mt-auto">
         <div className="rounded-lg bg-sidebar-accent p-4 text-sidebar-foreground">
           <h4 className="font-medium text-sm">App Profile</h4>
-          <div className="flex items-center mt-2 gap-3">
+          <div className="flex items-center mt-3 gap-3">
             <div className="h-10 w-10 rounded-md bg-primary flex items-center justify-center text-white font-medium">
               A
             </div>

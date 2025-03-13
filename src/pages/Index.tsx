@@ -1,19 +1,10 @@
 
 import React, { useState } from "react";
-import TabNavigation from "@/components/ui/TabNavigation";
 import OverviewTab from "@/components/overview/OverviewTab";
 import KeywordTab from "@/components/keywords/KeywordTab";
 import ReviewsTab from "@/components/reviews/ReviewsTab";
 import CompetitorTab from "@/components/competitors/CompetitorTab";
 import MetadataTab from "@/components/metadata/MetadataTab";
-import {
-  BarChart3,
-  Search,
-  Star,
-  Users,
-  FileText,
-  FileSpreadsheet
-} from "lucide-react";
 import Sidebar from "@/components/layout/Sidebar";
 
 // Define tab types for the dashboard
@@ -21,16 +12,6 @@ type TabId = "overview" | "keywords" | "reviews" | "competitors" | "metadata" | 
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState<TabId>("overview");
-
-  // Define our tabs with icons
-  const tabs = [
-    { id: "overview", label: "Overview", icon: <BarChart3 size={16} /> },
-    { id: "keywords", label: "Keywords", icon: <Search size={16} /> },
-    { id: "reviews", label: "Reviews", icon: <Star size={16} /> },
-    { id: "competitors", label: "Competitors", icon: <Users size={16} /> },
-    { id: "metadata", label: "Metadata", icon: <FileText size={16} /> },
-    { id: "reports", label: "Reports", icon: <FileSpreadsheet size={16} /> }
-  ];
 
   // Render the active tab content
   const renderActiveTab = () => {
@@ -56,10 +37,10 @@ const Index = () => {
 
   return (
     <div className="flex h-screen overflow-hidden bg-background">
-      {/* Sidebar navigation - Fixed the missing props */}
+      {/* Sidebar navigation */}
       <Sidebar 
         activeTab={activeTab}
-        onTabChange={setActiveTab}
+        onTabChange={(tab) => setActiveTab(tab as TabId)}
       />
       
       {/* Main content area */}
@@ -76,15 +57,6 @@ const Index = () => {
             </div>
           </div>
         </header>
-        
-        {/* Tab navigation */}
-        <div className="px-6 py-4 border-b bg-muted/30">
-          <TabNavigation 
-            tabs={tabs} 
-            activeTab={activeTab} 
-            onChange={(value) => setActiveTab(value as TabId)} 
-          />
-        </div>
         
         {/* Tab content with scrollable area */}
         <main className="flex-1 overflow-auto p-6">

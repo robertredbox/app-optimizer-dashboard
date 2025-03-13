@@ -13,13 +13,13 @@ interface ChartContainerProps {
 const ChartContainer = ({ title, subtitle, children, className, action }: ChartContainerProps) => {
   return (
     <div className={cn(
-      "chart-container rounded-lg border border-border bg-white p-5 shadow-sm animate-fade-in",
+      "chart-container rounded-lg border border-border bg-white p-6 shadow-md animate-fade-in",
       className
     )}>
-      <div className="flex justify-between items-start mb-4">
+      <div className="flex justify-between items-start mb-5">
         <div>
           <h3 className="text-base font-heading font-medium text-brand-deep-indigo">{title}</h3>
-          {subtitle && <p className="text-sm text-muted-foreground">{subtitle}</p>}
+          {subtitle && <p className="text-sm text-muted-foreground mt-1">{subtitle}</p>}
         </div>
         {action && (
           <div className="flex items-center">
@@ -27,7 +27,7 @@ const ChartContainer = ({ title, subtitle, children, className, action }: ChartC
           </div>
         )}
       </div>
-      <div className="h-[calc(100%-60px)] min-h-[200px]">
+      <div className="h-[calc(100%-70px)] min-h-[200px]">
         {children}
       </div>
     </div>
