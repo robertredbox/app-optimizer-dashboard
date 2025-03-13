@@ -18,7 +18,7 @@ const ChartContainer = ({ title, subtitle, children, className, action }: ChartC
     )}>
       <div className="flex justify-between items-start mb-4">
         <div>
-          <h3 className="text-base font-medium">{title}</h3>
+          <h3 className="text-base font-heading font-medium text-brand-deep-indigo">{title}</h3>
           {subtitle && <p className="text-sm text-muted-foreground">{subtitle}</p>}
         </div>
         {action && (

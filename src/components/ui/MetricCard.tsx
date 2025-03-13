@@ -18,11 +18,11 @@ const MetricCard = ({ title, value, change, trend, icon, className }: MetricCard
       className
     )}>
       <div className="flex items-center justify-between">
-        <h3 className="text-sm font-medium text-muted-foreground">{title}</h3>
-        {icon && <div className="text-primary/80">{icon}</div>}
+        <h3 className="text-sm font-heading font-medium text-muted-foreground">{title}</h3>
+        {icon && <div className="text-brand-deep-indigo">{icon}</div>}
       </div>
       <div className="mt-1">
-        <div className="metric-value">{value}</div>
+        <div className="metric-value text-brand-deep-indigo">{value}</div>
         {change && (
           <div className="flex items-center mt-1 text-sm">
             {trend === 'up' && <ArrowUp className="h-4 w-4 mr-1 text-success" />}

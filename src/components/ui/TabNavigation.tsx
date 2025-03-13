@@ -24,7 +24,7 @@ const TabNavigation = ({ tabs, activeTab, onChange, className }: TabNavigationPr
             key={tab.id}
             value={tab.id}
             className={cn(
-              "flex items-center gap-2 h-9 px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+              "flex items-center gap-2 h-9 px-4 py-2 data-[state=active]:bg-brand-deep-indigo data-[state=active]:text-white"
             )}
           >
             {tab.icon && <span className="mr-1">{tab.icon}</span>}

@@ -20,7 +20,8 @@
     --card: 0 0% 100%;
     --card-foreground: 222.2 47.4% 11.2%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Update primary color to Deep Indigo */
+    --primary: 269 53% 13%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -39,6 +40,16 @@
     --warning-foreground: 355.7 100% 97.3%;
 
     --ring: 215 20.2% 65.1%;
+
+    /* Sidebar specific colors - Deep Indigo theme */
+    --sidebar-background: 269 53% 13%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 269 53% 13%;
+    --sidebar-accent: 270 50% 20%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 270 30% 25%;
+    --sidebar-ring: 270 40% 50%;
 
     --radius: 0.5rem;
   }
@@ -85,6 +96,10 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-medium;
+  }
 }
 
 /* Custom classes */
@@ -99,6 +114,15 @@
   
   .metric-value {
     @apply text-2xl font-semibold;
+  }
+  
+  /* Sidebar link styling */
+  .sidebar-link {
+    @apply flex items-center gap-2 px-4 py-2 text-sidebar-foreground/80 rounded-md transition-colors hover:bg-sidebar-accent hover:text-sidebar-foreground;
+  }
+  
+  .sidebar-link.active {
+    @apply bg-sidebar-accent text-sidebar-foreground font-medium;
   }
 }
 

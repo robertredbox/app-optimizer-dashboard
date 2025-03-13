@@ -17,7 +17,7 @@ import {
 import Sidebar from "@/components/layout/Sidebar";
 
 // Define tab types for the dashboard
-type TabId = "overview" | "keywords" | "reviews" | "competitors" | "metadata" | "reports";
+type TabId = "overview" | "keywords" | "reviews" | "competitors" | "metadata" | "reports" | "settings";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState<TabId>("overview");
@@ -47,6 +47,8 @@ const Index = () => {
         return <MetadataTab />;
       case "reports":
         return <div className="p-6">Custom Reports functionality coming soon</div>;
+      case "settings":
+        return <div className="p-6">Settings content coming soon</div>;
       default:
         return <OverviewTab />;
     }
@@ -54,8 +56,11 @@ const Index = () => {
 
   return (
     <div className="flex h-screen overflow-hidden bg-background">
-      {/* Sidebar navigation */}
-      <Sidebar />
+      {/* Sidebar navigation - Fixed the missing props */}
+      <Sidebar 
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+      />
       
       {/* Main content area */}
       <div className="flex-1 flex flex-col overflow-hidden">

@@ -74,6 +74,14 @@ export default {
 				info: {
 					DEFAULT: 'hsl(var(--info))',
 					foreground: 'hsl(var(--info-foreground))'
+				},
+				// Brand colors based on guidelines
+				brand: {
+					'deep-indigo': '#251041',
+					'purple': '#8200FF',
+					'dark-purple': '#3C1E64',
+					'orange': '#FFA000',
+					'red': '#FF2D00',
 				}
 			},
 			fontFamily: {
