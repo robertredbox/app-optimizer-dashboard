@@ -12,7 +12,10 @@ interface ChartContainerProps {
 
 const ChartContainer = ({ title, subtitle, children, className, action }: ChartContainerProps) => {
   return (
-    <div className={cn("chart-container animate-fade-in", className)}>
+    <div className={cn(
+      "chart-container rounded-lg border border-border bg-white p-5 shadow-sm animate-fade-in",
+      className
+    )}>
       <div className="flex justify-between items-start mb-4">
         <div>
           <h3 className="text-base font-medium">{title}</h3>
