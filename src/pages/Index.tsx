@@ -1,5 +1,7 @@
 
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { useRouting } from "@/contexts/RoutingContext";
+import { initAppTweakWrapper, initializeAppTweakWrappers } from "@/utils/appTweakWrapper";
 import OverviewTab from "@/components/overview/OverviewTab";
 import KeywordTab from "@/components/keywords/KeywordTab";
 import ReviewsTab from "@/components/reviews/ReviewsTab";
@@ -11,7 +13,36 @@ import Sidebar from "@/components/layout/Sidebar";
 type TabId = "overview" | "keywords" | "reviews" | "competitors" | "metadata" | "reports" | "settings";
 
 const Index = () => {
-  const [activeTab, setActiveTab] = useState<TabId>("overview");
+  const { 
+    activeTab, 
+    setActiveTab,
+    setActiveSection,
+    setHighlightSection,
+    setActiveDataPoint
+  } = useRouting();
+
+  // Initialize the AppTweak wrapper with routing setters
+  useEffect(() => {
+    // Initialize the routing setters
+    initAppTweakWrapper({
+      setActiveTab,
+      setActiveSection,
+      setHighlightSection,
+      setActiveDataPoint
+    });
+    
+    // Initialize the MCP wrappers
+    initializeAppTweakWrappers();
+    
+    // Cleanup function
+    return () => {
+      // Reset routing when component unmounts
+      setActiveTab("overview");
+      setActiveSection(null);
+      setHighlightSection(false);
+      setActiveDataPoint(null);
+    };
+  }, [setActiveTab, setActiveSection, setHighlightSection, setActiveDataPoint]);
 
   // Render the active tab content
   const renderActiveTab = () => {
